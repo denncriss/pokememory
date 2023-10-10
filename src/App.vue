@@ -18,7 +18,7 @@
     <div class="card-not-pokemons justify-center w-full">
       <div class="flex flex-col justify-center items-center max-w-md">
         <img class="rounded-lg" src="https://c.tenor.com/lmA7VALYIAsAAAAC/sad-pikachu.gif" alt="pikachu" />
-        <span class="text-custom-orange-50 mt-6 block text-center text-base"> actualmente no esta disponible para los dispositivos moviles </span>
+        <span class="text-custom-orange-50 mt-6 block text-center text-base">diseño proximamente en version mobile</span>
       </div>
     </div>
     <div class="w-full pokemons-view flex-col">
@@ -33,13 +33,13 @@
           <template #body>
             <div class="">
               <PokeSidebarSelect
-                label="dificultad"
+                label="Dificultad"
                 :optionSelected="difficultySelected"
                 :options="difficultyOptions"
                 :isGameStart="isGameStart"
                 @change="(option) => (difficultySelected = option)" />
               <PokeSidebarSelect
-                label="cantidad"
+                label="Cantidad"
                 :optionSelected="numberCardSelected"
                 :options="numberCardOptions"
                 :isGameStart="isGameStart"
