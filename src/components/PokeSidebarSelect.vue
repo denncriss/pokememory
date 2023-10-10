@@ -2,9 +2,14 @@
   <div class="mb-4">
     <p>{{ label }}:</p>
     <div :class="[isGameStart ? 'cursor-not-allowed' : 'cursor-pointer']" class="">
-      <div v-for="(item, index) in options" :key="index" class="my-1.5">
-        <PokeSidebarSelectItem :class="{ hidden: isGameStart && optionSelected !== item }" :isActive="optionSelected === item" :content="item" @click="changeOption(item)" />
-      </div>
+      <template v-for="(item, index) in options" :key="index">
+        <PokeSidebarSelectItem
+          class="w-full"
+          :class="{ hidden: isGameStart && optionSelected !== item }"
+          :isActive="optionSelected === item"
+          :content="item"
+          @click="changeOption(item)" />
+      </template>
     </div>
   </div>
 </template>
